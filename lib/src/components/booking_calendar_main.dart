@@ -132,7 +132,7 @@ class _BookingCalendarMainState extends State<BookingCalendarMain> {
   }
 
   DateTime calculateFirstDay() {
-    final now = DateTime.now();
+    final now = DateTime.now().add(Duration(days: 1));
     if (widget.disabledDays != null) {
       return widget.disabledDays!.contains(now.weekday)
           ? now.add(Duration(days: getFirstMissingDay(now.weekday)))
