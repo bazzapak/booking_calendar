@@ -138,7 +138,7 @@ class _BookingCalendarMainState extends State<BookingCalendarMain> {
           ? now.add(Duration(days: getFirstMissingDay(now.weekday)))
           : now;
     } else {
-      return DateTime.now();
+      return DateTime.now().add(Duration(days: 1));
     }
   }
 
