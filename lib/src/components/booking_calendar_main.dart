@@ -166,6 +166,17 @@ class _BookingCalendarMainState extends State<BookingCalendarMain> {
                     child: TableCalendar(
                       startingDayOfWeek: widget.startingDayOfWeek?.toTC() ??
                           tc.StartingDayOfWeek.monday,
+                      daysOfWeekStyle: DaysOfWeekStyle(
+                        dowTextFormatter: (date, locale) {
+                          // Restituisce i nomi personalizzati dei giorni della settimana
+                          List<String> giorniSettimana = [
+                            'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab', 'Dom'
+                          ];
+                          return giorniSettimana[date.weekday - 1];
+                        },
+                        weekendStyle: TextStyle(color: Colors.red), // Colore per i weekend
+                        weekdayStyle: TextStyle(color: Colors.white), // Colore per i giorni feriali
+                      ),
                       holidayPredicate: (day) {
                         if (widget.disabledDates == null) return false;
 
