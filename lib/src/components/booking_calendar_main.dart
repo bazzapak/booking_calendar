@@ -228,7 +228,6 @@ class _BookingCalendarMainState extends State<BookingCalendarMain> {
                         _focusedDay = focusedDay;
                       },
                     ),
-                    color: Color.fromRGBO(84, 81, 112, 1.0),
                   ),
                   const SizedBox(height: 8),
                   widget.bookingExplanation ??
