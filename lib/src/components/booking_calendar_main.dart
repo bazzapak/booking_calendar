@@ -164,11 +164,9 @@ class _BookingCalendarMainState extends State<BookingCalendarMain> {
                 children: [
                   CommonCard(
                     child: TableCalendar(
-                      locale: 'it_IT',
                       startingDayOfWeek: widget.startingDayOfWeek?.toTC() ??
                           tc.StartingDayOfWeek.monday,
                       headerStyle: HeaderStyle(
-                          titleTextFormatter: (date, locale) => DateFormat.yMMMM(locale).format(date), 
                           titleTextStyle: TextStyle(
                             color: Colors.white, // Colore personalizzato per il nome del mese
                           ),
