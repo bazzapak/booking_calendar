@@ -177,22 +177,6 @@ class _BookingCalendarMainState extends State<BookingCalendarMain> {
                         weekendStyle: TextStyle(color: Colors.red), // Colore per i weekend
                         weekdayStyle: TextStyle(color: Colors.white), // Colore per i giorni feriali
                       ),
-                      calendarStyle: CalendarStyle(
-                      // Colore dei giorni selezionati
-                        selectedDecoration: BoxDecoration(
-                          color: Colors.green,
-                          shape: BoxShape.circle,
-                        ),
-                        // Colore dei giorni di oggi
-                        todayDecoration: BoxDecoration(
-                          color: Colors.orange,
-                          shape: BoxShape.circle,
-                        ),
-                        // Stile per i giorni feriali
-                        defaultTextStyle: TextStyle(color: Colors.black),
-                        // Stile per i giorni del weekend
-                        holidayTextStyle: TextStyle(color: Colors.red),
-                      ),
                       holidayPredicate: (day) {
                         if (widget.disabledDates == null) return false;
 
@@ -231,7 +215,23 @@ class _BookingCalendarMainState extends State<BookingCalendarMain> {
                       focusedDay: _focusedDay,
                       calendarFormat: _calendarFormat,
                       calendarStyle:
-                          const CalendarStyle(isTodayHighlighted: true),
+                          const CalendarStyle(
+                              isTodayHighlighted: true
+                            // Colore dei giorni selezionati
+                            selectedDecoration: BoxDecoration(
+                              color: Colors.green,
+                              shape: BoxShape.circle,
+                            ),
+                            // Colore dei giorni di oggi
+                            todayDecoration: BoxDecoration(
+                              color: Colors.orange,
+                              shape: BoxShape.circle,
+                            ),
+                            // Stile per i giorni feriali
+                            defaultTextStyle: TextStyle(color: Colors.black),
+                            // Stile per i giorni del weekend
+                            holidayTextStyle: TextStyle(color: Colors.red),
+                          ),
                       selectedDayPredicate: (day) {
                         return isSameDay(_selectedDay, day);
                       },
