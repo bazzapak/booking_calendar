@@ -177,6 +177,23 @@ class _BookingCalendarMainState extends State<BookingCalendarMain> {
                         weekendStyle: TextStyle(color: Colors.red), // Colore per i weekend
                         weekdayStyle: TextStyle(color: Colors.white), // Colore per i giorni feriali
                       ),
+                        calendarStyle: CalendarStyle(
+                          // Colore dei giorni selezionati
+                          selectedDecoration: BoxDecoration(
+                            color: Color.fromRGBO(110, 120, 244, 1),
+                            shape: BoxShape.circle,
+                          ),
+                          // Colore dei giorni di oggi
+                          todayDecoration: BoxDecoration(
+                            color: Color.fromRGBO(110, 120, 244, 1),
+                            shape: BoxShape.circle,
+                          ),
+                          // Stile per i giorni feriali
+                          defaultTextStyle: TextStyle(color: Colors.white),
+                          // Stile per i giorni del weekend
+                          holidayTextStyle: TextStyle(color: Colors.red),
+                        ),
+                      ),
                       holidayPredicate: (day) {
                         if (widget.disabledDates == null) return false;
 
