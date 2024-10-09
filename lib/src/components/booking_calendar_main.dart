@@ -176,7 +176,10 @@ class _BookingCalendarMainState extends State<BookingCalendarMain> {
                             color: Colors.white, // Colore personalizzato per il nome del mese
                           ),
                           formatButtonDecoration: BoxDecoration(
-                            color: Colors.white, // Colore di sfondo del selettore
+                            border: Border.all(
+                              color: Colors.white, // Colore del bordo
+                              width: 1.0, // Spessore del bordo
+                            ),
                             borderRadius: BorderRadius.circular(12.0),
                           ),
                           formatButtonTextStyle: TextStyle(
