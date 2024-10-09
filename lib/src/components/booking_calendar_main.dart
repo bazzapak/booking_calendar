@@ -170,6 +170,10 @@ class _BookingCalendarMainState extends State<BookingCalendarMain> {
                           titleTextStyle: TextStyle(
                             color: Colors.white, // Colore personalizzato per il nome del mese
                           ),
+                          formatButtonTextStyle: TextStyle(
+                            color: Colors.white, // Colore del testo del selettore
+                            fontWeight: FontWeight.bold,
+                          ),
                           leftChevronIcon: Icon(
                             Icons.chevron_left,
                             color: Colors.white, // Colore della freccia per il mese precedente
