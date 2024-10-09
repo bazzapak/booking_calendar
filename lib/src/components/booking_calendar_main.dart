@@ -166,9 +166,18 @@ class _BookingCalendarMainState extends State<BookingCalendarMain> {
                     child: TableCalendar(
                       startingDayOfWeek: widget.startingDayOfWeek?.toTC() ??
                           tc.StartingDayOfWeek.monday,
+                      availableCalendarFormats: const {
+                          CalendarFormat.month: 'Mese',
+                          CalendarFormat.twoWeeks: '2 Settimane',
+                          CalendarFormat.week: 'Settimana',
+                        },
                       headerStyle: HeaderStyle(
                           titleTextStyle: TextStyle(
                             color: Colors.white, // Colore personalizzato per il nome del mese
+                          ),
+                          formatButtonDecoration: BoxDecoration(
+                            color: Colors.white, // Colore di sfondo del selettore
+                            borderRadius: BorderRadius.circular(12.0),
                           ),
                           formatButtonTextStyle: TextStyle(
                             color: Colors.white, // Colore del testo del selettore
