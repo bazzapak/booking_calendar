@@ -216,7 +216,7 @@ class _BookingCalendarMainState extends State<BookingCalendarMain> {
                       calendarFormat: _calendarFormat,
                       calendarStyle:
                           const CalendarStyle(
-                              isTodayHighlighted: true
+                              isTodayHighlighted: true,
                             // Colore dei giorni selezionati
                             selectedDecoration: BoxDecoration(
                               color: Colors.green,
