@@ -219,18 +219,19 @@ class _BookingCalendarMainState extends State<BookingCalendarMain> {
                               isTodayHighlighted: true,
                             // Colore dei giorni selezionati
                             selectedDecoration: BoxDecoration(
-                              color: Colors.green,
+                              color: Color.fromRGBO(110, 120, 244, 1),
                               shape: BoxShape.circle,
                             ),
                             // Colore dei giorni di oggi
                             todayDecoration: BoxDecoration(
-                              color: Colors.orange,
+                              color: Color.fromRGBO(110, 120, 244, 1),
                               shape: BoxShape.circle,
                             ),
                             // Stile per i giorni feriali
-                            defaultTextStyle: TextStyle(color: Colors.black),
+                            defaultTextStyle: TextStyle(color: Colors.white),
                             // Stile per i giorni del weekend
                             holidayTextStyle: TextStyle(color: Colors.red),
+                            weekendTextStyle: TextStyle(color: Colors.white),
                           ),
                       selectedDayPredicate: (day) {
                         return isSameDay(_selectedDay, day);
